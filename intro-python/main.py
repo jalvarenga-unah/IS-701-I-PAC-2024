@@ -45,7 +45,11 @@ print(mi_lista.index(True)) # imprime la posicion del valor que se le pasa por p
 
 # tuplas
 mi_tupla = ('Juan', 29, 29, True, 'otra cosa', [1,2,3,True]) # tupla
+otra_tupla = ('Hola','Mundo','Python')
 
+ultima_tupla = mi_tupla + otra_tupla # concatenar tuplas
+
+print(ultima_tupla)
 # mi_tupla[0] = 'Juanito' # no se puede cambiar el valor de una tupla porque es inmutable
 
 print(mi_tupla[0]) # imprime la cantidad de veces que se repite el valor en la tupla
