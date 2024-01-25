@@ -6,6 +6,10 @@ mascota = {
     'comidas_favoritas': ['pollo', 'carne', 'pescado']
 }
 
+# otra forma de crear un diccionario
+test = dict(nombre='Apolo', edad=2, raza='Terrier')
+# print(nombre in test)
+
 #hacer una copia
 mascota2 = mascota.copy()
 
@@ -27,6 +31,8 @@ print(mascota.get('apodo', 'No tiene apodo'))
 print(mascota2.get('apodo', 'No tiene apodo'))
 print('tamanio',len(mascota)) # obtener el tamanio del diccionario
 print(mascota.items()) # obtener los items del diccionario     
+#TODO: por investigar
+# print(mascota.has_key('apodo')) # verificar si existe una llave en el diccionario
 
 nuevos_datos = {
     'edad': 3,
