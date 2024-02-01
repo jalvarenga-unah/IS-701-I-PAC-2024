@@ -16,16 +16,31 @@ nombre = 'Juan'
 print(saludo('Enrique'))
 
 def area_triangulo(base: float, altura: float):
+    '''
+    Calcula el área de un triángulo
+    base: base del triángulo
+    altura: altura del triángulo
+    '''
     return (base * altura) / 2
 
-area = area_triangulo(altura = 5, base = 10)
+area = area_triangulo(5, 10)
 
 print(area)
 
-def suma_numeros(*valores):
+def suma_numeros(*valores): #tupla
    # valores es una tupla y no se puede modificar
-    print(valores)
+    print(valores) 
     suma = 0
     for valor in valores:
         suma += valor
     return suma
+
+print( suma_numeros(1,4,6,8) )
+
+# **kwargs
+def persona( ** atributos ): #diccionario
+    return atributos
+
+persona1 = persona(nombre = 'Juan', edad = 25)
+
+print(persona1) 
