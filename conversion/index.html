@@ -22,9 +22,12 @@
   <h3>Conversión de grados Cº a Fº</h3>
 
   <input type="number" placeholder="Ingrese un valor">
+
+  <input type="range" min="0" max="200">
+
   <button>Convertir a Fº</button>
 
-  <h2>El resultado de convertir 12 C a F es: 30</h2>
+  <h2></h2>
 
   <script> //  <-- Etiqueta
 
@@ -40,7 +43,36 @@
       console.log('Modelo cargado')
     } 
 
-    cargarModelo()
+    cargarModelo() // ejecutar la funcion para cargar el modelo
+
+    // referencias a los elementos HTML
+    const boton = document.querySelector('button')
+    const input = document.querySelector('input')
+    const h2 = document.querySelector('h2')
+
+    //obtener el evento click del boton
+
+    boton.addEventListener( 'click', function(){
+
+      const celsius = parseInt(input.value) 
+
+      const tensor = tf.tensor1d([celsius])
+
+      const resultado = modelo.predict( tensor )
+
+      const fahrenheit = Math.round(resultado.dataSync()[0])
+
+      let mensaje = `El resultado de convertir ${celsius} C a F es: ${fahrenheit}`
+
+      h2.innerText = mensaje
+      console.log(mensaje)
+      
+      
+    })
+
+
+
+
 
   </script>
 </body>
