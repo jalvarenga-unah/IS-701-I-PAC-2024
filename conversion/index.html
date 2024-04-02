@@ -26,7 +26,21 @@
 
   <h2>El resultado de convertir 12 C a F es: 30</h2>
 
-  <script>
+  <script> //  <-- Etiqueta
+
+    // Javascript
+
+    //variable que contendra el modelo
+    let modelo = null
+
+    async function cargarModelo(){
+      console.log('Cargando modelo...')
+      //cargar el modelo desde el archivo .json
+      modelo = await tf.loadLayersModel('model.json')
+      console.log('Modelo cargado')
+    } 
+
+    cargarModelo()
 
   </script>
 </body>
